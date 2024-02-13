@@ -3,14 +3,15 @@ const uploadFile = require('../Configures/cloud')
 
 
 const createProduct = async(req,res) =>{
-    // const result = await uploadFile(req.file, res);
+    const result = await uploadFile(req.file, res);
+    console.log(result.secure_url)
     try{
         const newProduct = await Product.create({
             name:req.body.name,
             price:req.body.price,
             description:req.body.description,
             productinfo:req.body.productinfo,
-            image:req.body.image,
+            image:result.secure_url,
             size:req.body.size,
             stock:req.body.stock,
         });

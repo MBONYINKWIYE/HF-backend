@@ -61,7 +61,7 @@ const updateUser = async (req, res) => {
         });
         res.status(200).json({
             message:'user updated successfully',
-            user
+            newUser
         })
     } catch(err){
         res.status(400).json({
@@ -71,7 +71,7 @@ const updateUser = async (req, res) => {
     }
 }
 
-const deleteUser = async (req, res) => {k
+const deleteUser = async (req, res) => {
     try{
         const user = await User.findByIdAndDelete(req.params.id);
         res.status(200).json({

@@ -1,11 +1,11 @@
 const multer = require('multer');
 const path = require('path')
 
-const upload = multer.diskStorage({
+const upload = multer({
    storage:multer.diskStorage({}),
    fileFilter:(req, file, cb) =>{
     let ext = path.extname(file.originalname);
-    if(ext !== '.jpg' && ext !== '.png'&& ext !=='.gif' && ext !== '.jpeg'){
+    if(ext !== '.jpg' && ext !== '.png'&& ext !=='.gif' && ext !== '.JPG'&& ext !== '.jpeg'){
         cb(new Error('File type not supported'), false);
     }
     cb(null, true);
