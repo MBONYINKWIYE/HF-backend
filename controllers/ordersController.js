@@ -1,5 +1,4 @@
 const Orders = require('../models/orders');
-const Product = require('../models/product');
 
 
 const createOrder = async(req,res)=>{
@@ -45,23 +44,23 @@ const getOrderById = async (req, res) => {
     }
 }
 
-const updateUser = async (req, res) => {
+const updateOrder = async (req, res) => {
     try{
-        const user = await User.findById({ _id: req.params.id})
-        if(!user){
+        const order = await Order.findById({ _id: req.params.id});
+        if(!order){
             res.status(404).json({
                 status: 'failed',
-                message: 'User not found'
+                message: 'Order not found'
             });
         }
-        const newUser = await User.findByIdAndUpdate( req.params.id, {
-            name: req.body.name,
-            email: req.body.email,
-            password: req.body.password
+        const newOrder = await Order.findByIdAndUpdate( req.params.id, {
+            orderItems: req.body.orderItems,
+            address: req.body.address,
+            phone: req.body.phone,
         });
         res.status(200).json({
-            message:'user updated successfully',
-            user
+            message:'Order updated successfully',
+            newOrder
         })
     } catch(err){
         res.status(400).json({
@@ -86,4 +85,4 @@ const deleteOrder = async (req, res) => {k
     }
 }
 
-module.exports = {createOrder, getOrder, getOrderById, deleteOrder}
+module.exports = {createOrder, getOrder,updateOrder, getOrderById, deleteOrder}

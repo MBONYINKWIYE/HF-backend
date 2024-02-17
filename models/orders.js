@@ -35,6 +35,11 @@ const ordersSchema = mongoose.Schema({
         type:Date,
         default:Date.now
     },
+    status:{
+        type:String,
+        enum:['Pending','Delivered'],
+        default:'Pending'
+    }
 
 })
 
