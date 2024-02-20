@@ -21,15 +21,17 @@ mongoose.connect(process.env.MONGO_URL).then(() => console.log('db connected'))
 //Routes
 const api = process.env.API_URL;
 const productRouter = require('./routers/productRoute');
-const userRouter = require('./routers/userRoute')
-const orderRouter = require('./routers/orderRoute')
+const userRouter = require('./routers/userRoute');
+const orderRouter = require('./routers/orderRoute');
+const vendorRouter = require('./routers/vendorRoute');
 
 
 
 
 app.use(`${api}/products`, productRouter);
 app.use(`${api}/users`, userRouter);
-app.use(`${api}/orders`, orderRouter)
+app.use(`${api}/orders`, orderRouter);
+app.use(`${api}/vendors`, vendorRouter);
 app.get("/*",(req,res)=>{
     res.status(404).json({message:"url not found"})
 })
