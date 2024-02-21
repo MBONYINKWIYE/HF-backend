@@ -24,6 +24,7 @@ const productRouter = require('./routers/productRoute');
 const userRouter = require('./routers/userRoute');
 const orderRouter = require('./routers/orderRoute');
 const vendorRouter = require('./routers/vendorRoute');
+const payRouter = require('./routers/paymentRouter');
 
 
 
@@ -32,6 +33,7 @@ app.use(`${api}/products`, productRouter);
 app.use(`${api}/users`, userRouter);
 app.use(`${api}/orders`, orderRouter);
 app.use(`${api}/vendors`, vendorRouter);
+app.use('/', payRouter);
 app.get("/*",(req,res)=>{
     res.status(404).json({message:"url not found"})
 })

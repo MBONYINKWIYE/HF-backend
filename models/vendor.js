@@ -23,8 +23,8 @@ const vendorSchema = mongoose.Schema({
     },
     deliver:{
         type: String,
-        enum:['Daily','Weekly','Monthly','Daily'],
-        default:'Daily',
+        enum:['Choose','Daily','Weekly','Monthly','Daily'],
+        default:'Choose',
         required: true
     }
     

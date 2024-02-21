@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { getUserById } = require('../controllers/userController');
 
 const ordersSchema = mongoose.Schema({
     orderItems: [
