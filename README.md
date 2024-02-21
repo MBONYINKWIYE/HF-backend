@@ -14,7 +14,15 @@
 -Deleting product:Delete https://happy-farmers.onrender.com/happy-farmers/v1/products/id
 
 
-3.Orders:
+3.Products:
+-Post new vendor:Post https://happy-farmers.onrender.com/happy-farmers/v1/vendors
+-Get all vendors:Get https://happy-farmers.onrender.com/happy-farmers/v1/vendors
+-Get one vendor:Get https://happy-farmers.onrender.com/happy-farmers/v1/vendors/id
+-Editing vendor:Put https://happy-farmers.onrender.com/happy-farmers/v1/vendors/id
+-Deleting vendor:Delete https://happy-farmers.onrender.com/happy-farmers/v1/vendors/id
+
+
+4.Orders:
 -Post new an order:Post https://happy-farmers.onrender.com/happy-farmers/v1/orders
 -Get all orders:Get https://happy-farmers.onrender.com/happy-farmers/v1/orders
 -Get one an order:Get https://happy-farmers.onrender.com/happy-farmers/v1/orders/id
