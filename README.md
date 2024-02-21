@@ -14,7 +14,7 @@
 -Deleting product:Delete https://happy-farmers.onrender.com/happy-farmers/v1/products/id
 
 
-3.Products:
+3.Vendors:
 -Post new vendor:Post https://happy-farmers.onrender.com/happy-farmers/v1/vendors
 -Get all vendors:Get https://happy-farmers.onrender.com/happy-farmers/v1/vendors
 -Get one vendor:Get https://happy-farmers.onrender.com/happy-farmers/v1/vendors/id
